@@ -1,0 +1,8 @@
+1.NuGet'ы
+2.Scaffold-DbContext "Host=192.168.227.6;Port=8080;Database=Barberschop;Username=postgres;Password=111" -OutPutDir Models
+2.1. Npgsql.EntityFrameworkCore.PostgreSQL
+3.Контроллеры
+4. builder.Services.AddScoped<KontiKholodowContext>();
+------------------------------
+1.Фрейм
+

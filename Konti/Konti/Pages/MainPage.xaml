@@ -1,0 +1,26 @@
+﻿<Page x:Class="Konti.Pages.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Konti.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="MainPage">
+
+    <Grid Background="#699dd1">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+        <StackPanel  HorizontalAlignment="Center" VerticalAlignment="Center" Height="310" Width="800" Grid.Row="1" Background="#FFE4E1" >
+            <Button Content="Товары" Height="35" Margin="0 15 0 15" Click="Button_Click"> </Button>
+            <Button Content="Поставщики" Height="35" Margin="0 0 0 15" Click="Button_Click_1"></Button>
+            <Button Content="Склады" Height="35" Margin="0 0 0 15" Click="Button_Click_5"></Button>
+            <Button Content="Работники" Height="35" Margin="0 0 0 15" Click="Button_Click_2"></Button>
+            <Button Content="Поставки" Height="35" Margin="0 0 0 15" Click="Button_Click_3"></Button>
+            <Button Content="Пользователи" Height="35" Margin="0 0 0 15" Click="Button_Click_6"></Button>
+        </StackPanel>
+    </Grid>
+</Page>

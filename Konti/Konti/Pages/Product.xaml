@@ -1,0 +1,57 @@
+﻿<Page x:Class="Konti.Pages.Product"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Konti.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Product">
+
+    <Grid Background="#699dd1">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Center" Orientation="Horizontal">
+            <TextBlock FontSize="16" Text="Найти:" Margin="10 0 10 0" ></TextBlock>
+            <TextBox x:Name="TxbSearch"  Width="150"  FontSize="16" Margin="5 0 20 0" TextChanged="TxbSearch_TextChanged" ></TextBox>
+        </StackPanel>
+        <Button Name ="BtnBack" Height="20" Margin="5" Width="100" HorizontalAlignment="Left" Content="Назад" Click="BtnBack_Click"/>
+
+        <ListView Name="ProductList" Grid.Row="1">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel >
+                        <Label Content="ID: "></Label>
+                        <Label Content="{Binding idProduct}">
+                        </Label>
+                        <Label Content="Название: "></Label>
+                        <Label Content="{Binding name}">
+                        </Label>
+                        <Label Content="Кол-во: "></Label>
+                        <Label Content="{Binding amount}">
+                        </Label>
+                        <Label Content="Цена: "></Label>
+                        <Label Content="{Binding price}">
+                        </Label>
+                        <Label Content="Тип: "></Label>
+                        <Label Content="{Binding type}">
+                        </Label>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <StackPanel Grid.Row="2"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    >
+            <Button Name="BtnAdd" Height="24" Width="150" Content="Добавить" Margin="10" Click="BtnAdd_Click_1"/>
+            <Button Name="BtnEdit" Height="24" Width="150" Content="Редактировать" Margin="10" Click="BtnEdit_Click" />
+            <Button Name="BtnDeleat" Height="24" Width="150" Content="Удалить" Margin="10" Click="BtnDeleat_Click"/>
+        </StackPanel>
+    </Grid>
+</Page>
